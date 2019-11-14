@@ -13,13 +13,18 @@ Gem::Specification.new do |spec|
   spec.homepage      = "http://bills-imac.com"
   spec.license       = "MIT"
 
-  spec.metadata["allowed_push_host"] = "http://bills-imac.com"
 
-  spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "Put your gem's public repo URL here."
-  spec.metadata["changelog_uri"] = "  Put your gem's CHANGELOG.md URL here."
+  # spec.metadata appears to be optional information, but since this is just for local use, try commenting this out.
+  # the gem build fails with the info below.
+  #  spec.metadata["allowed_push_host"] = "http://bills-imac.com"
 
+  #  spec.metadata["homepage_uri"] = spec.homepage
+  #  spec.metadata["source_code_uri"] = "Put your gem's public repo URL here."
+  #  spec.metadata["changelog_uri"] = "  Put your gem's CHANGELOG.md URL here."
+  
   # Specify which files should be added to the gem when it is released.
+  
+  
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
   spec.files         = Dir.chdir(File.expand_path('..', __FILE__)) do
     `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
