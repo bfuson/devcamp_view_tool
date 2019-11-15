@@ -1,6 +1,4 @@
 module DevcampViewTool
-  class Error < StandardError; 
-  end
   
   class Renderer
     def self.copyright name,msg  #  present the copyright declaration
